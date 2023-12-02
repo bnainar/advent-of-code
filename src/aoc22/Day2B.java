@@ -1,6 +1,10 @@
+package aoc22;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import static utils.Utils.print;
+
 
 public class Day2B {
     public static void main(String[] args) throws FileNotFoundException {
@@ -22,6 +26,6 @@ public class Day2B {
             else
                 sum += 1 + (me - 'X');
         }
-        System.out.println(sum);
+        print("%d",sum);
     }
 }
