@@ -8,7 +8,7 @@ import static utils.Utils.print;
 
 public class Day2B {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/submit"));
+        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
         int sum = 0;
         while(sc.hasNextLine()){
             String line = sc.nextLine();

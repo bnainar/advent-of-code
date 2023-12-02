@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc22d3">
-      <change afterPath="$PROJECT_DIR$/src/aoc22/Day3A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aoc22/Day3B.java" afterDir="false" />
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/aoc22/Day4A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc22/Day4B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day2A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day2A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day2B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day2B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day3A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day3A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701517586468</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="aoc22d3">
+      <option name="closed" value="true" />
+      <created>1701528059527</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701528059527</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
