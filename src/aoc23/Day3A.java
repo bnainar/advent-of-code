@@ -1,56 +1,37 @@
 package aoc23;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Day3A {
-    public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
-        int sum = 0, C = 0;
-        ArrayList<String> arr = new ArrayList<>();
-        while(sc.hasNextLine()){
-            String line = sc.nextLine();
-            C = line.length();
-            arr.add(line);
-        }
+    public static void main(String[] args) throws IOException {
+        int sum = 0;
+        var arr = (ArrayList<String>) Files.readAllLines(Paths.get("C:/dev/advent-of-code/inputs/t"));
         for(int i = 0; i < arr.size(); i++){
-            for(int j = 0; j < arr.get(i).length(); j++){
-                if(Character.isDigit(arr.get(i).charAt(j))){
-
-                    int start = j;
-                    int num = 0;
-                    while(j < arr.get(i).length() && Character.isDigit(arr.get(i).charAt(j))){
-                        num = (num * 10) + (arr.get(i).charAt(j) - '0');
-                        j++;
-                    }
-                    j--;
-                    boolean res = canInclude(i, j, arr, C, start);
-
-                    if(res) {
-
-
-                        sum += num;
-                        System.out.println(arr.get(i).substring(start, j + 1) + (res) + (num));
-                    }
+            String line = arr.get(i);
+            for(int j = 0; j < line.length(); j++){
+                if(Character.isDigit(line.charAt(j))){
+                    int start = j, num = 0;
+                    while(j < line.length() && Character.isDigit(line.charAt(j)))
+                        num = (num * 10) + (line.charAt(j++) - '0');
+                    if(canInclude(i, --j, arr, start))  sum += num;
                 }
             }
         }
         System.out.println(sum);
     }
 
-    private static boolean canInclude(int i, int j, ArrayList<String> arr, int C, int start) {
-
+    private static boolean canInclude(int i, int j, ArrayList<String> arr, int start) {
         int minCol = Math.max(0, start - 1), minRow = Math.max(i - 1, 0);
-        int maxCol = Math.min(j + 1, C - 1), maxRow = Math.min(i + 1, arr.size() - 1);
-        for(int x = minRow; x <= maxRow; x++){
+        int maxCol = Math.min(j + 1, arr.get(i).length() - 1), maxRow = Math.min(i + 1, arr.size() - 1);
+        for(int x = minRow; x <= maxRow; x++)
             for(int y = minCol; y <= maxCol; y++){
                 char c = arr.get(x).charAt(y);
                 if(!Character.isDigit(c) && c != '.')
                         return true;
             }
-        }
         return false;
     }
 

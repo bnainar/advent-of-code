@@ -1,14 +1,17 @@
 package aoc23;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import static utils.Utils.print;
 
 public class Day3B {
-    public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
-        var arr = new ArrayList<String>();
-        while(sc.hasNextLine()) arr.add(sc.nextLine());
+    public static void main(String[] args) throws IOException {
+        var arr = (ArrayList<String>) Files.readAllLines(Paths.get("C:/dev/advent-of-code/inputs/t"));
         int C = arr.get(0).length(), ans = 0;
         var map = new HashMap<String, List<Integer>>();
         for(int i = 0; i < arr.size(); i++) {
@@ -26,7 +29,7 @@ public class Day3B {
         for(var v: map.values())
             if(v.size() == 2)
                 ans += v.get(0) * v.get(1);
-        System.out.println(ans);
+        print("%d", ans);
     }
     private static String findStar(int i, int j, ArrayList<String> arr, int start) {
         int minCol = Math.max(0, start - 1), minRow = Math.max(i - 1, 0);
