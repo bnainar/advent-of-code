@@ -1,36 +1,26 @@
 package aoc23;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Scanner;
 
 import static utils.Utils.print;
 
 public class Day4A {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
+        String path = "C:/dev/advent-of-code/inputs/t";
+//        Scanner sc = new Scanner(new File(path));
+        var arr = (ArrayList<String>) Files.readAllLines(Paths.get(path));
         int ans = 0;
-        while(sc.hasNextLine()){
-            var line = sc.nextLine();
-            var sp = line.split(":");
-            var win = sp[1].substring(0, sp[1].indexOf("|"));
-            var set  = new HashSet<Integer>();
-            for(var n: win.trim().split(" ")){
-
-               if(!n.isBlank()) set.add(Integer.parseInt(n));
-            }
-            var me = sp[1].substring(sp[1].indexOf("|") + 1);
-            int count = 0;
-            for(var n: me.trim().split(" "))
-                if(!n.isBlank())
-                    if(set.contains(Integer.parseInt(n)))
-                        if(count == 0) count = 1;
-                        else count *= 2;
-            ans += count;
+        for (String s : arr) {
+            var nums = s.split(":")[1].split("\\|");
+            var set = new HashSet<>(Arrays.asList(nums[0].trim().split(" +")));
+            int m = (int) Arrays.stream(nums[1].trim().split(" +")).filter(set::contains).count();
+            ans += (int) Math.pow(2, m - 1);
         }
-        print("%d hi", ans);
+        print("%d", ans);
     }
-
-
 }
