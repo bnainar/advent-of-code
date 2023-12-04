@@ -1,0 +1,1 @@
+C:\Users\naina\.jdks\openjdk-19.0.2\bin\javac.exe -cp src src/aoc22/Day6.java -d out && C:\Users\naina\.jdks\openjdk-19.0.2\bin\java.exe -cp out aoc22.Day6

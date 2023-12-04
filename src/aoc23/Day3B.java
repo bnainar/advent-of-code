@@ -29,7 +29,7 @@ public class Day3B {
         for(var v: map.values())
             if(v.size() == 2)
                 ans += v.get(0) * v.get(1);
-        print("%d", ans);
+        print("%d hi", ans);
     }
     private static String findStar(int i, int j, ArrayList<String> arr, int start) {
         int minCol = Math.max(0, start - 1), minRow = Math.max(i - 1, 0);

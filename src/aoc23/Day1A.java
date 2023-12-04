@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 class Day1A {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("C:/dev/leetcode/aoc/inputs/day1.txt"));
+        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
         int sum = 0;
         while (sc.hasNextLine()) {
             sum += solve(sc.nextLine());
         }
-        System.out.println(sum);
+        System.out.println(sum + "jggg");
     }
 
     static int solve(String str) {

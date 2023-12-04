@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.HashSet;
 import java.util.Scanner;
 
-import static utils.Utils.print;
+import static utils.Utils.*;
 
 public class Day6 {
     public static void main(String[] args) throws FileNotFoundException {
@@ -13,6 +13,7 @@ public class Day6 {
         var line = sc.nextLine();
         print("%d", solve1(line));
         print("%d", solve2(line));
+        System.out.println("test");
     }
 
     private static int solve1(String line) {
@@ -26,6 +27,7 @@ public class Day6 {
                 return i + 1;
         }
         return -1;
+
     }
     private static int solve2(String s) {
         int i = 0, j = 0;
