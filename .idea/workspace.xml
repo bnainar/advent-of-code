@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23db streams api">
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aoc23/Day4A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day4A.java" afterDir="false" />
     </list>
@@ -148,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701696256816</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="aoc23d4a streams api">
+      <option name="closed" value="true" />
+      <created>1701700290131</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701700290131</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +182,8 @@
     <MESSAGE value="aoc22d6" />
     <MESSAGE value="aoc23d4" />
     <MESSAGE value="aoc23db streams api" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23db streams api" />
+    <MESSAGE value="aoc23d4a streams api" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d4a streams api" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
