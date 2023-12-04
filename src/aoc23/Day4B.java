@@ -11,20 +11,15 @@ import static utils.Utils.print;
 
 public class Day4B {
     public static void main(String[] args) throws IOException {
-        var arr = (ArrayList<String>) Files.readAllLines(Paths.get("C:/dev/advent-of-code/inputs/t"));
+        String path = "C:/dev/advent-of-code/inputs/t";
+        var arr = (ArrayList<String>) Files.readAllLines(Paths.get(path));
         var cardCount = new int[arr.size() + 1];
-        Arrays.fill(cardCount, 1);
         int ans = 0;
         for (int i = 0; i < arr.size(); i++) {
-            ans += cardCount[i];
+            ans += ++cardCount[i];
             var nums = arr.get(i).split(":")[1].split("\\|");
-            var set = new HashSet<Integer>();
-            for (var n : nums[0].trim().split(" +"))
-                set.add(Integer.parseInt(n));
-            int m = 0;
-            for (var n : nums[1].trim().split(" +"))
-                if (set.contains(Integer.parseInt(n)))
-                    m++;
+            var set = new HashSet<>(Arrays.asList(nums[0].trim().split(" +")));
+            int m = (int) Arrays.stream(nums[1].trim().split(" +")).filter(set::contains).count();
             for (int x = 1; x <= m; x++)
                 cardCount[i + x] += cardCount[i];
         }
