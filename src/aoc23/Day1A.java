@@ -11,7 +11,7 @@ class Day1A {
         while (sc.hasNextLine()) {
             sum += solve(sc.nextLine());
         }
-        System.out.println(sum + "jggg");
+        System.out.println(sum);
     }
 
     static int solve(String str) {

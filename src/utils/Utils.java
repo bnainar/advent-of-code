@@ -1,17 +1,21 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Utils {
     public static void print(String format, Object... args) {
         System.out.printf((format) + "%n", args);
     }
+
     public static int[] getIntArray(String line) {
         return getNumberStream(line)
                 .mapToInt(Integer::parseInt)
                 .toArray();
     }
+
     public static long[] getLongArray(String line) {
         return getNumberStream(line)
                 .mapToLong(Long::parseLong)
@@ -23,15 +27,23 @@ public class Utils {
                 .filter(s -> !s.isBlank());
     }
 
+    public static ArrayList<Long> getLongList(String line) {
+        return (ArrayList<Long>) getNumberStream(line)
+                .mapToLong(Long::parseLong)
+                .boxed()
+                .collect(Collectors.toList());
+    }
+
     public static boolean isInteger(String s) {
         try {
             Integer.parseInt(s);
-        } catch(NumberFormatException | NullPointerException e) {
+        } catch (NumberFormatException | NullPointerException e) {
             return false;
         }
         return true;
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         System.out.println(Arrays.toString(getIntArray("  23    45 2 1 32 44")));
         System.out.println(Arrays.toString(getIntArray(" Range 2: 23 . hi as  45 2 1 32 44")));
     }

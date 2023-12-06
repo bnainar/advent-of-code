@@ -3,8 +3,12 @@ package aoc23;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import static utils.Utils.getLongList;
 
 public class Day5B {
     static List<List<List<Long>>> maps = new ArrayList<>();
@@ -17,11 +21,10 @@ public class Day5B {
     record Range(long start, long end){}
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
-//        Scanner sc = new Scanner(new File(path));
         var arr = Files.readAllLines(Paths.get(path));
         var inputs = getLongList(arr.get(0).split(": ")[1]);
         var seeds = new ArrayDeque<Range>();
-        for(int i = 0; i + 1 < inputs.size(); i+=2){
+        for(int i = 0; i + 1 < inputs.size(); i += 2){
             seeds.offer(new Range(inputs.get(i), inputs.get(i) + inputs.get(i + 1)));
         }
         for(int i = 2; i < arr.size(); i += 2){
@@ -46,7 +49,8 @@ public class Day5B {
                     if (intersection[0] < intersection[1]) {
                         if (sStart < rStart) { // re-process the left segment not covered by the range
                             seeds.offer(new Range(sStart, rStart));
-                        } else if (rEnd < sEnd) { // re-process the right segment not covered by the range
+                        }
+                        if (rEnd < sEnd) { // re-process the right segment not covered by the range
                             seeds.offer(new Range(rEnd, sEnd));
                         }
                         newSeeds.add(new Range(intersection[0] - diff, intersection[1] - diff));
@@ -59,9 +63,6 @@ public class Day5B {
             seeds = new ArrayDeque<>(newSeeds);
         }
         System.out.println(seeds.stream().mapToLong(Range::start).min());
-    }
-    private static ArrayList<Long> getLongList(String line) {
-        return (ArrayList<Long>) Arrays.stream(line.split(" ")).mapToLong(Long::parseLong).boxed().collect(Collectors.toList());
     }
 }
 

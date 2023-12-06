@@ -18,18 +18,18 @@ public class Day3B {
             String line = arr.get(i);
             for (int j = 0; j < C; j++)
                 if (Character.isDigit(line.charAt(j))) {
-                    int start = j, n = 0;
-                    while (j < C && Character.isDigit(line.charAt(j)))
-                        n = (n * 10) + (line.charAt(j++) - '0');
-                    String pos = findStar(i, --j, arr, start);
+                    int start = j, num = line.charAt(j) - '0';
+                    while(j + 1 < line.length() && Character.isDigit(line.charAt(j + 1)))
+                        num = (num * 10) + (line.charAt(++j) - '0');
+                    String pos = findStar(i, j++, arr, start);
                     if (pos != null)
-                        map.computeIfAbsent(pos, k -> new ArrayList<>()).add(n);
+                        map.computeIfAbsent(pos, k -> new ArrayList<>()).add(num);
                 }
         }
         for(var v: map.values())
             if(v.size() == 2)
                 ans += v.get(0) * v.get(1);
-        print("%d hi", ans);
+        print("%d", ans);
     }
     private static String findStar(int i, int j, ArrayList<String> arr, int start) {
         int minCol = Math.max(0, start - 1), minRow = Math.max(i - 1, 0);

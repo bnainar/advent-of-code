@@ -17,7 +17,7 @@ public class Day4B {
         int ans = 0;
         for (int i = 0; i < arr.size(); i++) {
             ans += ++cardCount[i];
-            var nums = arr.get(i).split(":")[1].split("\\|");
+            var nums = arr.get(i).split(": +")[1].split("\\|");
             var set = new HashSet<>(Arrays.asList(nums[0].trim().split(" +")));
             int m = (int) Arrays.stream(nums[1].trim().split(" +")).filter(set::contains).count();
             for (int x = 1; x <= m; x++)

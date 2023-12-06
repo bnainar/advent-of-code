@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DayX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aoc23/Day6A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aoc23/Day6B.java" afterDir="false" />
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DayX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day1A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day1A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day2A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day2A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day2B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day2B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day3A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day3A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day3B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day3B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day4A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day4A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day4B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day4B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -46,10 +53,11 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "last.edited.regexp": "``",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -167,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701703038661</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="aoc23d6">
+      <option name="closed" value="true" />
+      <created>1701848219209</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701848219209</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +211,19 @@
     <MESSAGE value="aoc23db streams api" />
     <MESSAGE value="aoc23d4a streams api" />
     <MESSAGE value="aoc23d4a streams sum" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d4a streams sum" />
+    <MESSAGE value="aoc23d6" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/aoc23/Day3A.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

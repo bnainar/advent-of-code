@@ -8,17 +8,16 @@ import java.util.Scanner;
 
 public class Day2B {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("C:/dev/leetcode/aoc/inputs/Bsub"));
+        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
         int ans = 0;
         while (sc.hasNextLine()) {
             var map = new HashMap<>(Map.of("red", 0, "green", 0, "blue", 0));
-            String line = sc.nextLine().split(":")[1];
-            for(String set: line.split(";"))
-                for(String e: set.split(",")){
-                    var x = e.trim().split(" ");
-                    int num = Integer.parseInt(x[0]);
-                    map.put(x[1], Math.max(map.get(x[1]), num));
-                }
+            String line = sc.nextLine().split(": ")[1];
+            for(String e: line.split(", +|; +")){
+                var x = e.trim().split(" ");
+                int num = Integer.parseInt(x[0]);
+                map.put(x[1], Math.max(map.get(x[1]), num));
+            }
             ans += map.values().stream().reduce(1, (a, c) -> a * c);
         }
         System.out.println(ans);
