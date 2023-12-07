@@ -23,7 +23,7 @@ public class Day7A {
         for (String line : lines) {
             String hand = line.split(" ")[0];
             int bid = Integer.parseInt(line.split(" ")[1]);
-            Type t = getType(hand);
+            Type t = getType1(hand);
             list.add(new Node(hand, bid, t));
         }
         list.sort((a, b) -> {
@@ -32,7 +32,7 @@ public class Day7A {
             } else {
                 for (int i = 0; i < a.hand.length(); i++) {
                     if (a.hand.charAt(i) != b.hand.charAt(i)) {
-                        return getIndex(b.hand.charAt(i)) - getIndex(a.hand.charAt(i));
+                        return cardStrength(b.hand.charAt(i)) - cardStrength(a.hand.charAt(i));
                     }
                 }
                 throw new IllegalArgumentException();
@@ -46,8 +46,7 @@ public class Day7A {
         System.out.println(ans);
     }
 
-
-    private static int getIndex(char c) {
+    private static int cardStrength(char c) {
         char[] ranks = {'A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'};
         for(int i = 0; i < ranks.length; i++){
             if(c == ranks[i])
@@ -56,11 +55,9 @@ public class Day7A {
         throw new IllegalArgumentException();
     }
 
-    private static Type getType(String hand) {
-        var arr = hand.toCharArray();
-        Arrays.sort(arr);
+    private static Type getType1(String hand) {
         var map = new HashMap<Character, Integer>();
-        for(char c: arr){
+        for(char c: hand.toCharArray()){
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
         Collection<Integer> values = map.values();

@@ -35,17 +35,8 @@ public class Day7B {
         for (String line : lines) {
             String hand = line.split(" ")[0];
             int bid = Integer.parseInt(line.split(" ")[1]);
-            ArrayList<String> temp = new ArrayList<>();
-            generateAllCombinations(new StringBuilder(hand), 0, temp);
-            var newList = new ArrayList<Node>();
-            for (String h : temp) {
-                try {
-                    newList.add(new Node(h, 0, getType(h)));
-                } catch (IllegalArgumentException ignored) {}
-            }
-            newList.sort(customComparator);
-            int n = newList.size() - 1;
-            list.add(new Node(hand, bid, newList.get(n).type));
+            Type t = getType2(hand);
+            list.add(new Node(hand, bid, t));
         }
         list.sort(customComparator);
         int ans = 0;
@@ -57,24 +48,6 @@ public class Day7B {
 
     static char[] ranks = {'A', 'K', 'Q', 'T', '9', '8', '7', '6', '5', '4', '3', '2', 'J'};
 
-
-    private static void generateAllCombinations(StringBuilder hand, int i, ArrayList<String> temp) {
-        if (i == hand.length()) {
-            temp.add(hand.toString());
-            return;
-        }
-        if (hand.charAt(i) == 'J') {
-            for (char r : ranks) {
-                if (r == 'J') continue;
-                var sb = new StringBuilder(hand);
-                sb.setCharAt(i, r);
-                generateAllCombinations(sb, i + 1, temp);
-            }
-        } else {
-            generateAllCombinations(hand, i + 1, temp);
-        }
-    }
-
     private static int cardStrength(char c) {
         for (int i = 0; i < ranks.length; i++) {
             if (c == ranks[i])
@@ -83,13 +56,22 @@ public class Day7B {
         throw new IllegalArgumentException();
     }
 
-    private static Type getType(String hand) {
-        var arr = hand.toCharArray();
+    private static Type getType2(String hand) {
         var map = new HashMap<Character, Integer>();
-        for (char c : arr) {
-            if (c != 'J')
+        char maxChar = ' ';
+        int maxFreq = Integer.MIN_VALUE;
+        int jokers = 0;
+        for (char c : hand.toCharArray()) {
+            if (c != 'J'){
                 map.put(c, map.getOrDefault(c, 0) + 1);
+                if(map.get(c) > maxFreq){
+                    maxFreq = map.get(c);
+                    maxChar = c;
+                }
+            }
+            else jokers++;
         }
+        map.put(maxChar, map.getOrDefault(maxChar, 0) + jokers);
         Collection<Integer> values = map.values();
         List<Integer> vals = new ArrayList<>(values);
         vals.sort(Collections.reverseOrder());
