@@ -8,11 +8,11 @@ import static utils.Utils.print;
 
 public class Day3B {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/submit"));
-        int sum = 0, GROUP_SIZE = 3;
+        Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
+        int sum = 0;
         while(sc.hasNextLine()){
             int[] freq = new int[128];
-            for(int i = 0; i < GROUP_SIZE; i++)
+            for(int i = 0; i < 3; i++)
                 for(char c : sc.nextLine().toCharArray())
                     freq[c] |= 1 << i;
             char badge = ' ';

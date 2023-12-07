@@ -5,31 +5,21 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static utils.Utils.print;
+import static utils.Utils.getIntArray;
 
 public class Day5B {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(new File("C:/dev/advent-of-code/inputs/t"));
         var stack = new HashMap<Integer, StringBuilder>();
         buildStack(sc, stack);
-        stack.forEach((k, v) -> print("%d -> %s", k, v));
         while(sc.hasNextLine()){
-            int[] ins = parseInstructions(sc);
+            int[] ins = getIntArray(sc.nextLine());
             var from = stack.get(ins[1]);
             String pop = from.substring(from.length() - ins[0]);
             from.setLength(from.length() - ins[0]);
             stack.get(ins[2]).append(pop);
         }
         stack.forEach((k, v) -> System.out.print(v.charAt(v.length() - 1)));
-    }
-
-    private static int[] parseInstructions(Scanner sc) {
-        int[] arr = new int[3];
-        for(int i = 0; i < 3; i++){
-            sc.next();
-            arr[i] = sc.nextInt();
-        }
-        return arr;
     }
 
     private static void buildStack(Scanner sc, HashMap<Integer, StringBuilder> stack) {
@@ -43,5 +33,6 @@ public class Day5B {
                         .insert(0, c);
             }
         }
+        sc.nextLine();
     }
 }

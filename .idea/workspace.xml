@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aoc23/tst.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day7A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day7A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day7B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day7B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day3B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day3B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day5A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day5B.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701939162955</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="joker impersonates the most occurring card">
+      <option name="closed" value="true" />
+      <created>1701940872007</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701940872007</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,7 +234,8 @@
     <MESSAGE value="aoc23d6" />
     <MESSAGE value="minor refactor" />
     <MESSAGE value="refactor aoc23d7" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor aoc23d7" />
+    <MESSAGE value="joker impersonates the most occurring card" />
+    <option name="LAST_COMMIT_MESSAGE" value="joker impersonates the most occurring card" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
