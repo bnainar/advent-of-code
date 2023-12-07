@@ -20,7 +20,7 @@ public class Day5B {
      */
     record Range(long start, long end){}
     public static void main(String[] args) throws IOException {
-        String path = "C:/dev/advent-of-code/inputs/t";
+        String path = "C:/dev/advent-of-code/inputs/d";
         var arr = Files.readAllLines(Paths.get(path));
         var inputs = getLongList(arr.get(0).split(": ")[1]);
         var seeds = new ArrayDeque<Range>();
@@ -35,7 +35,6 @@ public class Day5B {
             }
             maps.add(map);
         }
-
         for (var map: maps) {
             var newSeeds = new HashSet<Range>();
             o:while(!seeds.isEmpty()) {
