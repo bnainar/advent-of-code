@@ -1,7 +1,5 @@
 package aoc23;
 
-import java.awt.image.AreaAveragingScaleFilter;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -20,13 +18,11 @@ public class Day7A {
     record Node(String hand, int bid, Type type){}
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
-        Scanner sc = new Scanner(new File(path));
-        var lines = (ArrayList<String>) Files.readAllLines(Paths.get(path));
-
+        var lines =  Files.readAllLines(Paths.get(path));
         var list = new ArrayList<Node>();
-        for(int i = 0; i < lines.size(); i++){
-            String hand = lines.get(i).split(" ")[0];
-            int bid = Integer.parseInt(lines.get(i).split(" ")[1]);
+        for (String line : lines) {
+            String hand = line.split(" ")[0];
+            int bid = Integer.parseInt(line.split(" ")[1]);
             Type t = getType(hand);
             list.add(new Node(hand, bid, t));
         }
@@ -49,6 +45,7 @@ public class Day7A {
         }
         System.out.println(ans);
     }
+
 
     private static int getIndex(char c) {
         char[] ranks = {'A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'};

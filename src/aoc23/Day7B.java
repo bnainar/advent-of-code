@@ -16,71 +16,49 @@ public class Day7B {
         HIGH_CARD
     }
 
-    record Node(String hand, int bid, Type type) {
-    }
-    // 250680510 too big
+    record Node(String hand, int bid, Type type) { }
+    static Comparator<Node> customComparator = (a, b) -> {
+        if (!a.type.equals(b.type)) {
+            return b.type.compareTo(a.type);
+        }
+        for (int i = 0; i < a.hand.length(); i++) {
+            if (a.hand.charAt(i) != b.hand.charAt(i)) {
+                return cardStrength(b.hand.charAt(i)) - cardStrength(a.hand.charAt(i));
+            }
+        }
+        throw new IllegalArgumentException();
+    };
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
-        var lines = (ArrayList<String>) Files.readAllLines(Paths.get(path));
-
+        var lines = Files.readAllLines(Paths.get(path));
         var list = new ArrayList<Node>();
-        for (int i = 0; i < lines.size(); i++) {
-            String hand = lines.get(i).split(" ")[0];
-            int bid = Integer.parseInt(lines.get(i).split(" ")[1]);
-            System.out.println(hand);
-            temp.clear();
-            generateAllCombinations(new StringBuilder(hand), 0);
-            System.out.println(temp);
+        for (String line : lines) {
+            String hand = line.split(" ")[0];
+            int bid = Integer.parseInt(line.split(" ")[1]);
+            ArrayList<String> temp = new ArrayList<>();
+            generateAllCombinations(new StringBuilder(hand), 0, temp);
             var newList = new ArrayList<Node>();
             for (String h : temp) {
-                var res = getType(h);
-                if (res != null) {
-                    newList.add(new Node(h, 0, res));
-                }
+                try {
+                    newList.add(new Node(h, 0, getType(h)));
+                } catch (IllegalArgumentException ignored) {}
             }
-            newList.sort((a, b) -> {
-                if (a.type != b.type) {
-                    return b.type.compareTo(a.type);
-                } else {
-                    for (int j = 0; j < a.hand.length(); j++) {
-                        if (a.hand.charAt(j) != b.hand.charAt(j)) {
-                            return getIndex(b.hand.charAt(j)) - getIndex(a.hand.charAt(j));
-                        }
-                    }
-                    throw new IllegalArgumentException();
-                }
-            });
-            Type t = getType(hand);
+            newList.sort(customComparator);
             int n = newList.size() - 1;
-            list.add(new Node(
-                    hand,
-                    bid,
-                    newList.get(n).type));
+            list.add(new Node(hand, bid, newList.get(n).type));
         }
-        list.sort((a, b) -> {
-            if (a.type != b.type) {
-                return b.type.compareTo(a.type);
-            } else {
-                for (int i = 0; i < a.hand.length(); i++) {
-                    if (a.hand.charAt(i) != b.hand.charAt(i)) {
-                        return getIndex(b.hand.charAt(i)) - getIndex(a.hand.charAt(i));
-                    }
-                }
-                return 0;
-            }
-        });
+        list.sort(customComparator);
         int ans = 0;
-        for (int i = 0; i < list.size(); i++) {
-            int rank = i + 1;
-            ans += rank * list.get(i).bid;
-        }
+        for (int i = 0; i < list.size(); i++)
+            ans += (i + 1) * list.get(i).bid;
+
         System.out.println(ans);
     }
 
     static char[] ranks = {'A', 'K', 'Q', 'T', '9', '8', '7', '6', '5', '4', '3', '2', 'J'};
-    static ArrayList<String> temp = new ArrayList<>();
 
-    private static void generateAllCombinations(StringBuilder hand, int i) {
+
+    private static void generateAllCombinations(StringBuilder hand, int i, ArrayList<String> temp) {
         if (i == hand.length()) {
             temp.add(hand.toString());
             return;
@@ -90,14 +68,14 @@ public class Day7B {
                 if (r == 'J') continue;
                 var sb = new StringBuilder(hand);
                 sb.setCharAt(i, r);
-                generateAllCombinations(sb, i + 1);
+                generateAllCombinations(sb, i + 1, temp);
             }
         } else {
-            generateAllCombinations(hand, i + 1);
+            generateAllCombinations(hand, i + 1, temp);
         }
     }
 
-    private static int getIndex(char c) {
+    private static int cardStrength(char c) {
         for (int i = 0; i < ranks.length; i++) {
             if (c == ranks[i])
                 return i;
@@ -107,12 +85,10 @@ public class Day7B {
 
     private static Type getType(String hand) {
         var arr = hand.toCharArray();
-        Arrays.sort(arr);
         var map = new HashMap<Character, Integer>();
-        int jokers = 0;
         for (char c : arr) {
-            if (c == 'J') jokers++;
-            else map.put(c, map.getOrDefault(c, 0) + 1);
+            if (c != 'J')
+                map.put(c, map.getOrDefault(c, 0) + 1);
         }
         Collection<Integer> values = map.values();
         List<Integer> vals = new ArrayList<>(values);
@@ -131,7 +107,7 @@ public class Day7B {
             return Type.ONE_PAIR;
         else if (map.size() == 5)
             return Type.HIGH_CARD;
-        return null;
+        throw new IllegalArgumentException();
     }
 
 }
