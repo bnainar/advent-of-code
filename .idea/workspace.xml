@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d6">
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day5AGuava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day7A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day7B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day1A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day1A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day2A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day2A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day2B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day2B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day3A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day3A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day3B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day3B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day4A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day4A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day4B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day4B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advent-of-code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/advent-of-code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +42,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -54,9 +53,9 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "last.edited.regexp": "``",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
@@ -183,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701848219209</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="minor refactor">
+      <option name="closed" value="true" />
+      <created>1701863610606</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701863610606</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +219,8 @@
     <MESSAGE value="aoc23d4a streams api" />
     <MESSAGE value="aoc23d4a streams sum" />
     <MESSAGE value="aoc23d6" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d6" />
+    <MESSAGE value="minor refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -221,6 +229,11 @@
           <url>file://$PROJECT_DIR$/src/aoc23/Day3A.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/aoc23/Day7B.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

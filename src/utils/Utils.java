@@ -22,7 +22,7 @@ public class Utils {
                 .toArray();
     }
 
-    private static Stream<String> getNumberStream(String line) {
+    public static Stream<String> getNumberStream(String line) {
         return Arrays.stream(line.split("[^0-9]+| +"))
                 .filter(s -> !s.isBlank());
     }
