@@ -241,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702110369510</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="aoc23d9 use List&lt;int[]&gt;">
+      <option name="closed" value="true" />
+      <created>1702115659405</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702115659405</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +286,8 @@
     <MESSAGE value="aoc23d8" />
     <MESSAGE value="aoc23d9" />
     <MESSAGE value="aoc23d9 use prev variable instead of adding elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d9 use prev variable instead of adding elements" />
+    <MESSAGE value="aoc23d9 use List&lt;int[]&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d9 use List&lt;int[]&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
