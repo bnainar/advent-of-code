@@ -15,6 +15,11 @@ public class Utils {
                 .mapToInt(Integer::parseInt)
                 .toArray();
     }
+    public static ArrayList<Integer> getIntList(String line) {
+        return (ArrayList<Integer>) getNumberStream(line)
+                .mapToInt(Integer::parseInt)
+                .boxed().collect(Collectors.toList());
+    }
 
     public static long[] getLongArray(String line) {
         return getNumberStream(line)
