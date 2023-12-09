@@ -14,11 +14,8 @@ public class Day8A {
         String dirs = lines.get(0).trim();
         var adj = new HashMap<String, String[]>();
         for(int i = 2; i < lines.size(); i++){
-            String x = lines.get(i);
-            String from = x.substring(0, x.indexOf(" ="));
-            String left = x.substring(x.indexOf("(") + 1, x.indexOf(","));
-            String right = x.substring(x.indexOf(",") + 2, x.indexOf(")"));
-            adj.put(from, new String[]{left, right});
+            var s = lines.get(i).split("[^A-Z]+");
+            adj.put(s[0], new String[]{s[1], s[2]});
         }
         int i = -1, steps = 0;
         String curr = "AAA";

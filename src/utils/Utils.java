@@ -23,7 +23,7 @@ public class Utils {
     }
 
     public static Stream<String> getNumberStream(String line) {
-        return Arrays.stream(line.split("[^0-9]+| +"))
+        return Arrays.stream(line.split(" +|[^0-9-]+"))
                 .filter(s -> !s.isBlank());
     }
 
@@ -44,7 +44,9 @@ public class Utils {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getIntArray("  23    45 2 1 32 44")));
-        System.out.println(Arrays.toString(getIntArray(" Range 2: 23 . hi as  45 2 1 32 44")));
+        System.out.println(getLongList("  23    45 2 1 32 44"));
+        System.out.println(Arrays.toString(getLongArray(" Range 2: 23 . hi as  45 2 1 32 44")));
+        System.out.println(Arrays.toString(getIntArray("test3 4. -5 23..... -32")));
+        // TODO double arrays
     }
 }
