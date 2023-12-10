@@ -6,7 +6,9 @@ import java.nio.file.Paths;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-public class Day10A {
+import static utils.Utils.print;
+
+public class Day10 {
     record Node(int x, int y, int dist){}
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
@@ -23,34 +25,28 @@ public class Day10A {
                 }
             }
         }
-        int ans = Integer.MIN_VALUE;
+        int ans1 = Integer.MIN_VALUE;
         while(!q.isEmpty()){
             var curr = q.poll();
             int x = curr.x, y = curr.y, d = curr.dist;
-            ans = Math.max(ans, d);
+            ans1 = Math.max(ans1, d);
             char c = lines.get(x).charAt(y);
             if(c == 'S'){
                 char top = isValid(x - 1, y, R, C) ? lines.get(x - 1).charAt(y) : ' ';
                 char bottom = isValid(x + 1, y, R, C) ? lines.get(x + 1).charAt(y) : ' ';
                 char left = isValid(x, y - 1, R, C) ? lines.get(x).charAt(y - 1) : ' ';
                 char right = isValid(x, y + 1, R, C) ? lines.get(x).charAt(y + 1) : ' ';
-                if(right == '-' && bottom == '|') c = 'F';
-                // top "|7F"
-                // bottom "|LJ"
-                // left "-LF"
-                // right "-J7"
-                else if("|7F".indexOf(top) != -1 && "|LJ".indexOf(bottom) != -1) c = '|';
-                // -
+
+                if("|7F".indexOf(top) != -1 && "|LJ".indexOf(bottom) != -1) c = '|';
                 else if("-LF".indexOf(left) != -1 && "-J7".indexOf(right) != -1) c = '-';
-                // L
                 else if("|7F".indexOf(top) != -1 && "-J7".indexOf(right) != -1) c = 'L';
-                // J
                 else if("|7F".indexOf(top) != -1 && "-LF".indexOf(left) != -1) c = 'J';
-                // 7
                 else if("|LJ".indexOf(bottom) != -1 && "-LF".indexOf(left) != -1) c = '7';
-                // F
                 else if("|LJ".indexOf(bottom) != -1 && "-J7".indexOf(right) != -1) c = 'F';
-                else c = '.';
+                else throw new IllegalArgumentException();
+                var sb = new StringBuilder(lines.get(x));
+                sb.setCharAt(y, c);
+                lines.set(x, sb.toString());
             }
             if(c == '|' || c == 'L' || c == 'J'){
                 if(isValid(x - 1, y, R, C) && !vis[x - 1][y]){ // N
@@ -77,7 +73,43 @@ public class Day10A {
                 }
             }
         }
-        System.out.println(ans);
+
+        var state = new boolean[R][C];
+        int ans2 = 0;
+        for(int i = 0; i < R; i++){
+            boolean inside = false;
+            for(int j = 0; j < C; j++){
+                char c = lines.get(i).charAt(j);
+                if (vis[i][j] && "|JL".indexOf(c) != -1) {
+                        inside = !inside;
+                }
+                else {
+                    state[i][j] = inside;
+                    ans2 += inside ? 1 : 0;
+                }
+            }
+        }
+        for(int i = 0; i < R; i++){
+            for(int j = 0; j < C; j++){
+                char c = ' ';
+                if(vis[i][j]) {
+                    c = switch (lines.get(i).charAt(j)){
+                        case '|' -> '│';
+                        case '7' -> '┐';
+                        case 'L' -> '└';
+                        case 'F' -> '┌';
+                        case 'J' -> '┘';
+                        case '-' -> '─';
+                        default -> c;
+                    };
+                }
+                else if(state[i][j]) c = '▓';
+                System.out.print(c);
+            }
+            System.out.print("\n");
+        }
+        print("Part 1: %d\nPart 2: %d", ans1, ans2);
+
     }
 
     private static boolean isValid(int x, int y, int r, int c) {
