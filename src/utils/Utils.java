@@ -27,8 +27,12 @@ public class Utils {
                 .toArray();
     }
 
+//    public static Stream<String> getNumberStream(String line) {
+//        return Arrays.stream(line.split(" +|[^0-9-]+"))
+//                .filter(s -> !s.isBlank());
+//    }
     public static Stream<String> getNumberStream(String line) {
-        return Arrays.stream(line.split(" +|[^0-9-]+"))
+        return Arrays.stream(line.split(" +"))
                 .filter(s -> !s.isBlank());
     }
 
