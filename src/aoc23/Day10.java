@@ -14,6 +14,7 @@ public class Day10 {
         String path = "C:/dev/advent-of-code/inputs/t";
         var lines = (ArrayList<String>) Files.readAllLines(Paths.get(path));
         var q = new ArrayDeque<Node>();
+        var list = new ArrayList<Node>();
         int R = lines.size(), C = lines.get(0).length();
         boolean[][] vis = new boolean[R][C];
         o:for(int i = 0; i < lines.size(); i++){
@@ -28,6 +29,7 @@ public class Day10 {
         int ans1 = Integer.MIN_VALUE;
         while(!q.isEmpty()){
             var curr = q.poll();
+            list.add(curr);
             int x = curr.x, y = curr.y, d = curr.dist;
             ans1 = Math.max(ans1, d);
             char c = lines.get(x).charAt(y);
@@ -74,41 +76,16 @@ public class Day10 {
             }
         }
 
-        var state = new boolean[R][C];
-        int ans2 = 0;
-        for(int i = 0; i < R; i++){
-            boolean inside = false;
-            for(int j = 0; j < C; j++){
-                char c = lines.get(i).charAt(j);
-                if (vis[i][j] && "|JL".indexOf(c) != -1) {
-                        inside = !inside;
-                }
-                else {
-                    state[i][j] = inside;
-                    ans2 += inside ? 1 : 0;
-                }
-            }
+        double res = 0;
+        for (int i = 0; i < list.size(); i++) {
+            var p = i > 0 ? list.get(i - 1) : list.get(list.size() - 1);
+            var r = list.get(i);
+            res += (p.x - r.x) * (p.y + r.y);
         }
-        for(int i = 0; i < R; i++){
-            for(int j = 0; j < C; j++){
-                char c = ' ';
-                if(vis[i][j]) {
-                    c = switch (lines.get(i).charAt(j)){
-                        case '|' -> '│';
-                        case '7' -> '┐';
-                        case 'L' -> '└';
-                        case 'F' -> '┌';
-                        case 'J' -> '┘';
-                        case '-' -> '─';
-                        default -> c;
-                    };
-                }
-                else if(state[i][j]) c = '▓';
-                System.out.print(c);
-            }
-            System.out.print("\n");
-        }
-        print("Part 1: %d\nPart 2: %d", ans1, ans2);
+        double area = Math.abs(res) / 2;
+        double ans2 = area - (list.size() / 2.0) + 1;
+        print("Part 1: %d\nPart 2: %f", ans1, ans2);
+        // A + 1 - (b/2) = i
 
     }
 
