@@ -24,11 +24,11 @@ public class Day11 {
 
         int EXPANSION = 1000000;
         for(int i = 0; i < R; i++){
-            int prev = i == 0 ? -1 : rowPrefix[i - 1];
+            int prev = i == 0 ? 0 : rowPrefix[i - 1];
             rowPrefix[i] = prev + (rowHasG[i] ? 1 : EXPANSION);
         }
         for(int j = 0; j < C; j++){
-            int prev = j == 0 ? -1 : colPrefix[j - 1];
+            int prev = j == 0 ? 0 : colPrefix[j - 1];
             colPrefix[j] = prev + (colHasG[j] ? 1 : EXPANSION);
         }
 
