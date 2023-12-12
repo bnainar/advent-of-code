@@ -22,7 +22,7 @@ public class Day5B {
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/d";
         var arr = Files.readAllLines(Paths.get(path));
-        var inputs = getLongList(arr.get(0).split(": ")[1]);
+        var inputs = getLongList(arr.get(0).split(": ")[1], " ");
         var seeds = new ArrayDeque<Range>();
         for(int i = 0; i + 1 < inputs.size(); i += 2){
             seeds.offer(new Range(inputs.get(i), inputs.get(i) + inputs.get(i + 1)));
@@ -30,7 +30,7 @@ public class Day5B {
         for(int i = 2; i < arr.size(); i += 2){
             List<List<Long>> map = new ArrayList<>();
             while(i + 1 < arr.size() && !arr.get(i + 1).isBlank()) {
-                map.add(getLongList(arr.get(i + 1)));
+                map.add(getLongList(arr.get(i + 1), " "));
                 i++;
             }
             maps.add(map);

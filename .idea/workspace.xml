@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d11" />
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d11 fix ternary condition">
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day12A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DayX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day5A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc22/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day5B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5AGuava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day6A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day6A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day6B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day6B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +49,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Day11A.executor": "Run",
+    "Application.Day12A.executor": "Run",
+    "Application.Utils.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "true",
@@ -50,7 +66,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+    "settings.editor.selected.configurable": "google-java-format.settings"
   }
 }]]></component>
   <component name="RecentsManager">

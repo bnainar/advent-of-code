@@ -10,8 +10,8 @@ public class Day6A {
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
         var arr = Files.readAllLines(Paths.get(path));
-        var times = getIntArray(arr.get(0));
-        var dist = getIntArray(arr.get(1));
+        var times = getIntArray(arr.get(0), " ");
+        var dist = getIntArray(arr.get(1), " ");
         int ans = 1;
         for (int i = 0; i < times.length; i++) {
             ans *= getDist(times[i], dist[i]);

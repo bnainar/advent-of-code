@@ -12,7 +12,7 @@ public class DayX {
         Scanner sc = new Scanner(new File(path));
         var lines = (ArrayList<String>) Files.readAllLines(Paths.get(path));
 
-        int ans = 0;
+        long ans = 0;
         System.out.println(ans);
     }
 

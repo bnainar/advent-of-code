@@ -14,12 +14,12 @@ public class Day5A {
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
         var arr = Files.readAllLines(Paths.get(path));
-        var seeds = getLongList(arr.get(0).split(": ")[1]);
+        var seeds = getLongList(arr.get(0).split(": ")[1], " ");
 
         for(int i = 2; i < arr.size(); i += 2){
             List<List<Long>> map = new ArrayList<>();
             while(i + 1 < arr.size() && !arr.get(i + 1).isBlank()) {
-                map.add(getLongList(arr.get(i + 1)));
+                map.add(getLongList(arr.get(i + 1), " "));
                 i++;
             }
             transformations.add(map);

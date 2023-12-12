@@ -13,7 +13,7 @@ public class Day5A {
         var stack = new HashMap<Integer, StringBuilder>();
         buildStack(sc, stack);
         while(sc.hasNextLine()){
-            int[] ins = getIntArray(sc.nextLine());
+            int[] ins = getIntArray(sc.nextLine(), "[a-z]+| +");
             while(ins[0]--> 0){
                 var from = stack.get(ins[1]);
                 char pop = from.charAt(from.length() - 1);

@@ -16,7 +16,7 @@ public class Day9 {
         int ans1 = 0, ans2 = 0;
         for (String line : lines) {
             var list = new ArrayList<int[]>();
-            int[] nums = getIntArray(line);
+            int[] nums = getIntArray(line, " ");
             list.add(nums);
             while (IntStream.of(nums).anyMatch(n -> n != 0)) {
                 var diff = new int[nums.length - 1];
