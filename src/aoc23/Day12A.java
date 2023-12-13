@@ -41,6 +41,8 @@ public class Day12A {
         return Arrays.stream(input.split("[.]+")).filter(s -> !s.isBlank()).mapToLong(String::length).toArray();
 
     }
+    // break early like Word Search, dont need to generate all possibilites
+    // a combination is true if it reaches the end
     private static void generateComb(int i, String line, StringBuilder sb, ArrayList<String> list, long[] nums) {
         if(i == line.length()){
             list.add(sb.toString());

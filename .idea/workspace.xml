@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d11 fix ternary condition">
-      <change afterPath="$PROJECT_DIR$/src/aoc23/Day12A.java" afterDir="false" />
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d12A">
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day13.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc22/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day5A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc22/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc22/Day5B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5AGuava.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day5B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day5B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day6A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day6A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day6B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day6B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day12A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day12A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +40,9 @@
   "keyToString": {
     "Application.Day11A.executor": "Run",
     "Application.Day12A.executor": "Run",
+    "Application.Day13.executor": "Run",
+    "Application.Day13A.executor": "Run",
+    "Application.Day13B.executor": "Run",
     "Application.Utils.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
@@ -303,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702299688227</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="aoc23d12A">
+      <option name="closed" value="true" />
+      <created>1702365912480</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702365912480</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,7 +325,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aoc22d3" />
     <MESSAGE value="aoc22d4" />
     <MESSAGE value="aoc22d5" />
     <MESSAGE value="z" />
@@ -349,7 +349,8 @@
     <MESSAGE value="aoc23d10A" />
     <MESSAGE value="aoc23d10 part 1" />
     <MESSAGE value="aoc23d11" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d11" />
+    <MESSAGE value="aoc23d12A" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d12A" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
