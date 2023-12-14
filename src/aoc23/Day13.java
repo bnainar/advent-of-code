@@ -13,14 +13,13 @@ public class Day13 {
         Scanner sc = new Scanner(new File(path));
         var lines = new ArrayList<String>();
         int ans1 = 0, ans2 = 0;
-        while(sc.hasNext() || !lines.isEmpty()){
-            var l = sc.hasNextLine()? sc.nextLine() : "";
-            if(l.isBlank()){
+        while (sc.hasNext() || !lines.isEmpty()) {
+            var l = sc.hasNextLine() ? sc.nextLine() : "";
+            if (l.isBlank()) {
                 ans1 += part1(lines);
                 ans2 += part2(lines);
                 lines.clear();
-            }
-            else{
+            } else {
                 lines.add(l);
             }
         }
@@ -31,17 +30,17 @@ public class Day13 {
     private static int part1(ArrayList<String> matrix) {
         int R = matrix.size(), C = matrix.get(0).length();
         o:
-        for(int row = 0; row < R - 1; row++){
-            for(int i = row, j = i + 1; i >= 0 && j < R; i--, j++)
-                for(int c = 0; c < C; c++)
-                    if(matrix.get(i).charAt(c) != matrix.get(j).charAt(c))
+        for (int row = 0; row < R - 1; row++) {
+            for (int i = row, j = i + 1; i >= 0 && j < R; i--, j++)
+                for (int c = 0; c < C; c++)
+                    if (matrix.get(i).charAt(c) != matrix.get(j).charAt(c))
                         continue o;
 
             return 100 * (row + 1);
         }
         o:
-        for(int col = 0; col < C - 1; col++){
-            for(int i = col, j = i + 1; i >= 0 && j < C; i--, j++)
+        for (int col = 0; col < C - 1; col++) {
+            for (int i = col, j = i + 1; i >= 0 && j < C; i--, j++)
                 for (String line : matrix)
                     if (line.charAt(i) != line.charAt(j))
                         continue o;
@@ -50,27 +49,28 @@ public class Day13 {
         }
         return -1;
     }
+
     private static int part2(ArrayList<String> matrix) {
         int R = matrix.size(), C = matrix.get(0).length();
 
-        for(int row = 0; row < R - 1; row++){
+        for (int row = 0; row < R - 1; row++) {
             int mismatches = 0;
-            for(int i = row, j = i + 1; i >= 0 && j < R; i--, j++)
-                for(int c = 0; c < C; c++)
-                    if(matrix.get(i).charAt(c) != matrix.get(j).charAt(c))
+            for (int i = row, j = i + 1; i >= 0 && j < R; i--, j++)
+                for (int c = 0; c < C; c++)
+                    if (matrix.get(i).charAt(c) != matrix.get(j).charAt(c))
                         ++mismatches;
 
-            if(mismatches == 1) return 100 * (row + 1);
+            if (mismatches == 1) return 100 * (row + 1);
         }
 
-        for(int col = 0; col < C - 1; col++){
+        for (int col = 0; col < C - 1; col++) {
             int mismatches = 0;
-            for(int i = col, j = i + 1; i >= 0 && j < C; i--, j++)
+            for (int i = col, j = i + 1; i >= 0 && j < C; i--, j++)
                 for (String line : matrix)
                     if (line.charAt(i) != line.charAt(j))
                         ++mismatches;
 
-            if(mismatches == 1) return col + 1;
+            if (mismatches == 1) return col + 1;
         }
         return -1;
     }

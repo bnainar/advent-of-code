@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d12A">
-      <change afterPath="$PROJECT_DIR$/src/aoc23/Day13.java" afterDir="false" />
+    <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="aoc23d14">
+      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day14A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day14B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day12A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day12A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aoc23/Day13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day13.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,8 @@
     "Application.Day13.executor": "Run",
     "Application.Day13A.executor": "Run",
     "Application.Day13B.executor": "Run",
+    "Application.Day14A.executor": "Run",
+    "Application.Day14B.executor": "Run",
     "Application.Utils.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
@@ -59,7 +63,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "google-java-format.settings"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -304,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702365912480</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="aoc23d13">
+      <option name="closed" value="true" />
+      <created>1702482274767</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702482274767</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aoc22d4" />
     <MESSAGE value="aoc22d5" />
     <MESSAGE value="z" />
     <MESSAGE value="aoc23d3" />
@@ -350,7 +361,8 @@
     <MESSAGE value="aoc23d10 part 1" />
     <MESSAGE value="aoc23d11" />
     <MESSAGE value="aoc23d12A" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d12A" />
+    <MESSAGE value="aoc23d13" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
