@@ -14,6 +14,7 @@ object Day15 {
         part1(lines)
         part2(lines)
     }
+
     private fun getHash(l: String): Int {
         return l.chars().reduce(0) { acc: Int, c: Int -> (acc + c) * 17 % 256 }
     }
@@ -43,7 +44,9 @@ object Day15 {
         var ans = 0
         boxes.forEachIndexed { i, x ->
             x.forEachIndexed { j, y ->
-                ans += (i + 1) * (j + 1) * y.focalLength } }
+                ans += (i + 1) * (j + 1) * y.focalLength
+            }
+        }
         println("Part 2: $ans")
     }
 

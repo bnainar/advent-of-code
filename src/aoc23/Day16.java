@@ -16,9 +16,12 @@ public class Day16 {
             Dir.UP, new int[]{-1, 0},
             Dir.DOWN, new int[]{1, 0});
 
-    record Beam(int x, int y, Dir dir) { }
+    record Beam(int x, int y, Dir dir) {
+    }
+
     static int R = 0;
     static int C = 0;
+
     public static void main(String[] args) throws IOException {
         String path = "C:/dev/advent-of-code/inputs/t";
         var input = (ArrayList<String>) Files.readAllLines(Paths.get(path));
@@ -49,45 +52,33 @@ public class Day16 {
             vis[x][y] = true;
             char tile = input.get(x).charAt(y);
             switch (tile) {
-                case '.':
-                    redirectBeam(q, x, y, curr.dir);
-                    break;
-                case '|':
+                case '.' -> redirectBeam(q, x, y, curr.dir);
+                case '|' -> {
                     switch (curr.dir) {
-                        case UP:
-                        case DOWN:
-                            redirectBeam(q, x, y, curr.dir);
-                            break;
-                        default:
+                        case UP, DOWN -> redirectBeam(q, x, y, curr.dir);
+                        default -> {
                             redirectBeam(q, x, y, Dir.UP);
                             redirectBeam(q, x, y, Dir.DOWN);
+                        }
                     }
-                    break;
-                case '-':
+                }
+                case '-' -> {
                     switch (curr.dir) {
-                        case LEFT:
-                        case RIGHT:
-                            redirectBeam(q, x, y, curr.dir);
-                            break;
-                        default:
+                        case LEFT, RIGHT -> redirectBeam(q, x, y, curr.dir);
+                        default -> {
                             redirectBeam(q, x, y, Dir.LEFT);
                             redirectBeam(q, x, y, Dir.RIGHT);
+                        }
                     }
-                    break;
-                default:
+                }
+                default -> {
                     switch (curr.dir) {
-                        case LEFT:
-                            redirectBeam(q, x, y, tile == '/' ? Dir.DOWN : Dir.UP);
-                            break;
-                        case RIGHT:
-                            redirectBeam(q, x, y, tile == '/' ? Dir.UP : Dir.DOWN);
-                            break;
-                        case UP:
-                            redirectBeam(q, x, y, tile == '/' ? Dir.RIGHT : Dir.LEFT);
-                            break;
-                        case DOWN:
-                            redirectBeam(q, x, y, tile == '/' ? Dir.LEFT : Dir.RIGHT);
+                        case LEFT -> redirectBeam(q, x, y, tile == '/' ? Dir.DOWN : Dir.UP);
+                        case RIGHT -> redirectBeam(q, x, y, tile == '/' ? Dir.UP : Dir.DOWN);
+                        case UP -> redirectBeam(q, x, y, tile == '/' ? Dir.RIGHT : Dir.LEFT);
+                        case DOWN -> redirectBeam(q, x, y, tile == '/' ? Dir.LEFT : Dir.RIGHT);
                     }
+                }
             }
         }
         int ans = 0;
