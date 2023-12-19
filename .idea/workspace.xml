@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aoc23/Day17X.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day19A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day19B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aockt/Day15.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +69,8 @@
     "Application.Day16B.executor": "Run",
     "Application.Day17A.executor": "Run",
     "Application.Day17X.executor": "Run",
+    "Application.Day19A.executor": "Run",
+    "Application.Day19B.executor": "Run",
     "Application.Utils.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Kotlin.Day15.executor": "Run",
@@ -369,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702736196361</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="aoc23d17">
+      <option name="closed" value="true" />
+      <created>1702960299135</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1702960299135</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -390,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aoc22d6" />
     <MESSAGE value="aoc23d4" />
     <MESSAGE value="aoc23db streams api" />
     <MESSAGE value="aoc23d4a streams api" />
@@ -415,7 +426,8 @@
     <MESSAGE value="aoc23d15" />
     <MESSAGE value="aoc23d16" />
     <MESSAGE value="aoc23d16 enhanced switch" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d16 enhanced switch" />
+    <MESSAGE value="aoc23d17" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
