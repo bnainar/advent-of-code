@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6e3f3a4-33d9-40df-9ed2-679417165c47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/aoc23/Day17X.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aoc23/Day16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aoc23/Day16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aockt/Day15.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/aockt/Day15.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,41 +50,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Day11A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day12A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day13.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day13A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day13B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day14A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day14B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day15.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day15A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day15B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day16.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day16A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day16B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Utils.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Kotlin.Day15.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last.edited.regexp&quot;: &quot;``&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Day11A.executor": "Run",
+    "Application.Day12A.executor": "Run",
+    "Application.Day13.executor": "Run",
+    "Application.Day13A.executor": "Run",
+    "Application.Day13B.executor": "Run",
+    "Application.Day14A.executor": "Run",
+    "Application.Day14B.executor": "Run",
+    "Application.Day15.executor": "Run",
+    "Application.Day15A.executor": "Run",
+    "Application.Day15B.executor": "Run",
+    "Application.Day16.executor": "Run",
+    "Application.Day16A.executor": "Run",
+    "Application.Day16B.executor": "Run",
+    "Application.Day17A.executor": "Run",
+    "Application.Day17X.executor": "Run",
+    "Application.Utils.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Kotlin.Day15.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "kotlin-language-version-configured": "true",
+    "last.edited.regexp": "``",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\advent-of-code\utils\src" />
@@ -361,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702714979685</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="aoc23d16 enhanced switch">
+      <option name="closed" value="true" />
+      <created>1702736196361</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1702736196361</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -382,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use files.readAllLines in aoc23d3" />
     <MESSAGE value="aoc22d6" />
     <MESSAGE value="aoc23d4" />
     <MESSAGE value="aoc23db streams api" />
@@ -407,7 +414,8 @@
     <MESSAGE value="aoc23d14" />
     <MESSAGE value="aoc23d15" />
     <MESSAGE value="aoc23d16" />
-    <option name="LAST_COMMIT_MESSAGE" value="aoc23d16" />
+    <MESSAGE value="aoc23d16 enhanced switch" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoc23d16 enhanced switch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
